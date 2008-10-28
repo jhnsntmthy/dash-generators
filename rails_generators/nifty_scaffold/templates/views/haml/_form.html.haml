@@ -1,11 +1,11 @@
 - form_for @<%= singular_name %> do |f|
   = f.error_messages
-
-  <%- for attribute in attributes -%>
-  %p
-    = f.label :<%= attribute.name %>
-    %br
-    = f.<%= attribute.field_type %> :<%= attribute.name %>
-  <%- end -%>
+  %dl
+	  <%- for attribute in attributes -%>
+	  %dt
+	    = f.label :<%= attribute.name %>
+	  %dd
+	    = f.<%= attribute.field_type %> :<%= attribute.name %>
+	  <%- end -%>
   %p
     = f.submit "Submit"

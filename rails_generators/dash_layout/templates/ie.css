@@ -1,0 +1,2 @@
+.clearfix { zoom: 1; display: block; }
+img, li, div, ul, a, p { behavior: url("/javascripts/iepngfix.htc") }

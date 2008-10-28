@@ -70,6 +70,9 @@ class DashScaffoldGenerator < Rails::Generator::Base
         m.template "helper.rb", "app/helpers/#{plural_name}_helper.rb"
         
         m.directory "app/views/#{plural_name}"
+        m.directory "app/views/shared"
+        m.template "views/shared/_pager.html.erb", "app/views/shared/_pager.html.erb"
+        
         controller_actions.each do |action|
           if File.exist? source_path("views/#{view_language}/#{action}.html.#{view_language}")
             m.template "views/#{view_language}/#{action}.html.#{view_language}", "app/views/#{plural_name}/#{action}.html.#{view_language}"

@@ -1,11 +1,16 @@
 <%% title "<%= plural_name.titleize %>" %>
 
-<table>
+
+<%%= render :partial => 'shared/pager' unless @<%= plural_name %>.empty? %>
+<table class="tablesorter">
+	<thead>
   <tr>
   <%- for attribute in attributes -%>
     <th><%= attribute.column.human_name.titleize %></th>
   <%- end -%>
   </tr>
+	</thead>
+	<tbody>
   <%% for <%= singular_name %> in @<%= plural_name %> %>
     <tr>
     <%- for attribute in attributes -%>
@@ -22,8 +27,23 @@
     <%- end -%>
     </tr>
   <%% end %>
+	</tbody>
 </table>
 
 <%- if action? :new -%>
-<p><%%= link_to "New <%= singular_name.titleize %>", new_<%= singular_name %>_path %></p>
+<p><%%= link_to "Create a new <%= singular_name.titleize %>", new_<%= singular_name %>_path, :class => 'button' %></p>
 <%- end -%>
+
+
+<% content_for :right_sidebar do %>
+	<div class="hint">
+      <h3>Hint</h3>
+      <p>This is a hint.</p>
+    </div>
+	<div class="list">
+	  <h3>List Items</h3>
+	  <ul>
+	      <li><a href="#">link</a> <span class="date">date</span></li>
+	  </ul>
+	</div>
+<% end %>

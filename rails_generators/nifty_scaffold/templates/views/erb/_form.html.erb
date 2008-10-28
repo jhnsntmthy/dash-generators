@@ -1,11 +1,11 @@
 <%% form_for @<%= singular_name %> do |f| %>
   <%%= f.error_messages %>
 
+<dl>
 <%- for attribute in attributes -%>
-  <p>
-    <%%= f.label :<%= attribute.name %> %><br />
-    <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
-  </p>
+  <dt><%%= f.label :<%= attribute.name %> %></dt>
+	<dd><%%= f.<%= attribute.field_type %> :<%= attribute.name %> %></dd>
 <%- end -%>
+</dl>
   <p><%%= f.submit "Submit" %></p>
 <%% end %>

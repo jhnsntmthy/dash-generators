@@ -1,0 +1,952 @@
+body {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  background: #74bdcc;
+  line-height: 150%;
+}
+
+input, textarea, select, option, button, optgroup {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	padding: 0.3em 0.4em;
+}
+select {
+  padding: 0.2em 0 0.2em 0.2em;
+}
+select option {
+  padding: 0 1.5em 0 0;
+}
+optgroup {
+  font-style: normal;
+}
+
+.container {
+  padding: 0 2.5em;
+}
+
+.clearfix:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfixr {display:inline-block;}
+* html .clearfix {height:1%;}
+.clearfix {display:block;}
+.clear {clear:both;}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+p {
+  line-height: 16px;
+}
+
+a {
+  color: #1f5762;
+  background: transparent;
+  padding: 0.2em 0;
+}
+a:hover {
+  background-color: #1f5762;
+  color: #fff;
+  text-decoration: none;
+}
+
+.edit a,
+button.delete {
+  color: #f00;
+}
+.edit a:hover,
+button.delete:hover {
+  color: #fff;
+  background: #f00;
+}
+
+button.delete {
+  background: none;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.reminders li {
+  position: relative;
+}
+
+.reminders form {
+  position: absolute;
+  top: -1px;
+  right: 0;
+}
+
+
+/* -------------------------------------
+   boxes
+------------------------------------- */
+.error, .notice, .success {padding:.8em;margin-bottom:1em;border:2px solid #ddd;}
+.error {background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4;}
+.notice {background:#FFF6BF;color:#514721;border-color:#FFD324;}
+.success {background:#E6EFC2;color:#264409;border-color:#C6D880;}
+.error a {color:#8a1f11;}
+.notice a {color:#514721;}
+.success a {color:#264409;}
+.box {
+  margin: 1em 0 1.5em;
+}
+.box h3 {
+  font-size: 110%;
+  font-weight: bold;
+  margin: 0 !important;
+}
+.box p {
+  margin: 0.5em 0 !important;
+}
+.box ul {
+  margin: 0 0 0 2em;
+}
+.box ul li {
+  margin-top: 0.1em;
+  list-style-type: disc;
+}
+
+
+/* -------------------------------------
+   forms
+------------------------------------- */
+fieldset {
+  font-size: 100%;
+  border: 0;
+  padding: 1em;
+  margin: 0;
+  margin-bottom: 1em;
+  background: #eee;
+  border: 1px solid #ddd;
+}
+#left_content fieldset p {
+  margin-bottom: 2em;
+}
+fieldset div.field {
+  clear: both;
+  margin-bottom: 0.8em;
+}
+fieldset div.field label {
+  font-weight: bold;
+}
+fieldset div.field span.note {
+  display: block;
+  margin: 0.3em;
+  font-size: 80%;
+}
+fieldset div.field.text input,
+fieldset div.field.text textarea,
+fieldset div.field.select select {
+  margin-top: 0.3em;
+  border: 1px solid #ccc;
+  border-bottom-color: #e5e5e5;
+  border-top-color: #a0a0a0;
+}
+fieldset div.field.checkbox input {
+  margin-top: 0.3em;
+}
+fieldset div.field.button {
+  padding-top: 1em;
+  margin-bottom: 0;
+  font-size: 95%;
+}
+fieldset div.field.button.standalone {
+  padding-top: 0;
+}
+fieldset div.field.button button {
+	padding: 0.4em 0.8em;
+	font-size: 100%;
+	margin-right: 0.3em;
+	font-weight: bold;
+}
+fieldset div.field.button a {
+	color: #999;
+	text-decoration: none;
+}
+fieldset div.field.button a:hover {
+	color: #000;
+	background-color: transparent;
+	text-decoration: underline;
+}
+fieldset div.field.side {
+  clear: none;
+  float: left;
+  margin-right: 1.2em;
+}
+fieldset div.field.select.normal select, 
+fieldset div.field.text.normal textarea {
+  width: auto;
+  height: auto;
+}
+fieldset div.fieldWithErrors {
+  display: inline;
+}
+
+
+/* -------------------------------------
+   header
+------------------------------------- */
+#header {
+  background: #222;
+  font-size: 110%;
+  border-bottom: 2px solid #9edcf3;
+}
+#header b {
+  background: transparent url(../images/mini_logo.png) 0 0 no-repeat;
+  margin: 0.5em 0;
+  display: block;
+  padding: 0.7em 0 0.5em 0px;
+  font-size: 130%;
+  color: #fff;
+}
+#header b a {
+  color: #fff;
+  text-decoration: none;
+}
+#header b a:hover {
+  background: #000;
+}
+#header .right {
+  color: #999;
+  padding: 1.2em 0 0;
+}
+#header .right a {
+  color: #999;
+}
+#header .right a:hover {
+  background: transparent;
+  color: #fff;
+  text-decoration: underline;
+}
+#header select,
+#header option {
+  padding: 0;
+}
+#header select {
+  padding: 1px;
+  width: 200px;
+}
+
+
+
+/* -------------------------------------
+   page content
+------------------------------------- */
+#page {
+  text-align: left;
+}
+#left {
+  clear: both;
+  float: left;
+  width: 75%;
+  font-size: 115%;
+}
+#right {
+  float: right;
+  width: 23%;
+  font-size: 115%;
+}
+#left_content {
+  padding: 2em;
+  background: #fff;
+  min-height: 30em;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+}
+
+#left_content h1 {
+  font-size: 160%;
+  margin-bottom: 1em;
+}
+#left_content h1 div.action {
+  float: right;
+  font-size: 70%;
+}
+#left_content h1 div.action a {
+  color: #f00;
+  text-decoration: none;
+}
+#left_content h1 div.action a:hover {
+  color: #fff;
+  background: #f00;
+}
+#left_content h2 {
+  font-size: 160%;
+  margin-bottom: 1em;
+}
+#left_content h2 div.action {
+  float: right;
+  font-size: 70%;
+}
+#left_content h2 div.action a {
+  color: #f00;
+  text-decoration: none;
+}
+#left_content h2 div.action a:hover {
+  color: #fff;
+  background: #f00;
+}
+#left_content h3 {
+  font-size: 120%;
+  margin-bottom: 1em;
+}
+#left_content p {
+  margin-bottom: 1.5em;
+}
+
+#right_content .hint {
+  background: #FFE784;
+  margin: 0 0 1em 0;
+  padding: 1em;
+  border: 0.1em solid #E9D734;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+#right_content .list {
+  background: #B5E4F6;
+  margin: 0 0 1em 0;
+  padding: 1em;
+  border: 0.1em solid #87D4F0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+#right_content h3 {
+  margin-bottom: 1em;
+  font-size: 110%;
+}
+
+#right_content p {
+  margin-bottom: 1em;
+}
+
+#right_content .list ul {
+  margin: 0.5em 0 1em 0.5em;
+  line-height: 1.8;
+  overflow: hidden;
+}
+
+#right_content .list li {
+}
+
+#right_content .list li a {
+  color: #333;
+  padding: 0.1em;
+  text-decoration: underline;
+}
+
+#right_content .list li a:hover {
+  background: #EEE;
+  color: #000;
+  text-decoration: none;
+}
+
+#right_content .list li.overdue a {
+  color: #F00 !important;
+  font-weight: bold;
+}
+
+#right_content .list li.mini_class span.score {
+  float: right;
+}
+#right_content .list li.mini_class {
+  padding-bottom: 0.4em;
+  margin-bottom: 0.4em;
+  border-bottom: 1px dotted #81ACC0;
+}
+
+#right_content .list li span.date {
+  color: #555;
+  font-size: 95%;
+}
+
+
+/* -------------------------------------
+   footer
+------------------------------------- */
+#footer {
+  padding: 2em 0 2em 4em;
+}
+
+#footer p {
+  text-align: center;
+  color: #1f5762;
+  font-size: 120%;
+  line-height: 2;
+}
+
+#footer a {
+  background: none;
+  color: #1f5762;
+}
+
+#footer a:hover {
+  background: none;
+  color: #000;
+  text-decoration: underline;
+}
+
+
+/* -------------------------------------
+   courses
+------------------------------------- */
+ul#courses li {
+  margin-bottom: 1em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1em;
+}
+ul#courses li h4 {
+  font-size: 120%;
+  margin-bottom: 0.5em;
+}
+ul#courses li h4 a {
+  color: #000;
+  text-decoration: none;
+}
+ul#courses li h4 a:hover {
+  background: #000;
+  color: #fff;
+}
+#left_content h2 span.grade {
+  display: block;
+  float: right;
+  font-size: 80%;
+}
+div.grade span {
+  font-size: 160%;
+}
+
+
+/* -------------------------------------
+   score colors
+------------------------------------- */
+span.score {
+  padding: 0.1em 0.3em;
+}
+span.score.high {
+  background-color: #A2DE8D;
+  color: #2A641C;
+}
+span.score.medium {
+  background-color: #FFE685;
+  color: #574600;
+}
+span.score.low {
+  background-color: #f66;
+  color: #fff;
+}
+
+
+/* -------------------------------------
+   notes
+------------------------------------- */
+div.notes li.divider {
+  margin: 2em 0;
+}
+div.notes li.divider {
+  margin: 0 0 0.5em 0;
+  padding: 0.5em 0 0.5em;
+  font-weight: bold;
+  font-size: 90%;
+  border-bottom: 1px dotted #ccc;
+  text-transform: uppercase;
+  color: #666;
+}
+li.note {
+  margin: 0 0 3em 1.5em;
+}
+#left_content li.note h3 {
+  font-size: 140%;
+  margin: 1em 0 0.5em 0;
+  padding: 0;
+}
+li.note h3 a {
+  color: #000;
+  text-decoration: none;
+}
+li.note h3 a:hover {
+  background: #fff;
+  color: #000;
+  text-decoration: underline;
+}
+li.note h3 span.course a {
+  color: #999;
+  background: #eee;
+  padding: 0.3em 0.4em;
+}
+li.note div.body {
+  margin-bottom: 1em;
+}
+li.note h5 {
+  color: #666;
+  font-size: 95%;
+  font-weight: normal;
+}
+
+
+#assign_tasks_select {
+  margin: 1em 0;
+}
+#assign_tasks_select form {
+  margin: 0.5em 0 1em;
+}
+#assign_tasks_select select {
+  width: 75%;
+}
+#assign_tasks_select button {
+  padding: 0.3em 0.5em;
+  font-weight: bold;
+  font-size: 95%;
+}
+#right_content #assign_tasks_select ul {
+  margin: -0.5em 0 0.5em;
+}
+#assign_tasks_select li {
+  list-style: none;
+  margin-bottom: 0.5em;
+}
+#assign_tasks_select .action {
+  float: right;
+  font-size: 90%;
+}
+
+#note-edit input,
+#note-edit textarea {
+  width: 98%;
+}
+
+
+/* -------------------------------------
+   tasks/assignments/exams
+------------------------------------- */
+#left_content div.tasks {
+  margin-bottom: 3em;
+}
+#left_content div.tasks h3 {
+  padding: 0.6em;
+  font-size: 95%;
+}
+#left_content div.tasks.overdue h3 {
+  color: #fff;
+  background: #c00;
+}
+#left_content div.tasks.overdue span.date {
+  color: #c00;
+}
+#left_content div.tasks.upcoming h3 {
+  color: #000;
+  background: #fc0;
+}
+#left_content div.tasks.completed h3 {
+  color: #fff;
+  background: #3c0;
+}
+#left_content div.tasks li {
+  margin-left: 0.5em;
+}
+#left_content div.tasks li.divider {
+  margin: 0 0 0.5em 0;
+  padding: 0.5em 0 0.5em;
+  font-weight: bold;
+  font-size: 90%;
+  border-bottom: 1px dotted #ccc;
+  text-transform: uppercase;
+  color: #666;
+}
+#left_content div.tasks li.task {
+  margin-bottom: 0.8em;
+}
+#left_content div.tasks div.controls {
+  float: left;
+  width: 25px;
+}
+#left_content div.tasks div.description {
+  padding-top: 0.3em;
+  margin-left: 26px;
+}
+#left_content div.tasks span.date {
+  font-size: 95%;
+  display: block;
+  margin-bottom: 0.6em;
+}
+#left_content div.tasks h4 {
+  font-size: 130%;
+}
+#left_content div.tasks.completed h4 {
+  color: #666;
+}
+#left_content div.tasks h4 a {
+  color: #000;
+  text-decoration: none;
+}
+#left_content div.tasks h4 a:hover {
+  color: #fff;
+  background: #000;
+}
+#left_content div.tasks h4 span.course a {
+  color: #999;
+  background: #eee;
+  padding: 0.3em 0.4em;
+}
+div.tasks h4 span.edit {
+  font-size: 80%;
+}
+div.tasks h4 span.edit.complete {
+  font-size: 70%;
+}
+#left_content div.tasks h4 span.edit a {
+  color: #f00;
+  text-decoration: underline;
+}
+#left_content div.tasks h4 span.edit a:hover {
+  color: #fff;
+  background: #f00;
+  text-decoration: none;
+}
+#left_content div.tasks h4 span.edit.complete a {
+  color: #999;
+}
+#left_content div.tasks h4 span.edit.complete a:hover {
+  background: #ccc;
+  color: #000;
+}
+#left_content div.tasks p {
+  margin: 0.3em 0 0;
+}
+div.tasks h4 span.percentage {
+  color: #000;
+  font-size: 90%;
+}
+div.tasks h4 p span.ratio {
+  font-size: 75%;
+  color: #999;
+}
+div.tasks ul.related {
+  font-size: 95%;
+  margin: 0.8em 0;
+}
+div.tasks ul.related li {
+  margin: 0 0 0.3em 0;
+}
+div.tasks ul.related a {
+  padding: 0;
+  color: #999;
+}
+div.tasks ul.related a:hover {
+  background: transparent;
+  color: #000;
+}
+div.tasks ul.notes li {
+  background: transparent url(../images/icons/note_small.png) 0 0 no-repeat;
+  padding-left: 15px;
+}
+div.tasks ul.assets li {
+  background: transparent url(../images/icons/file_small.png) 0 3px no-repeat;
+  padding-left: 15px;
+}
+
+
+/* -------------------------------------
+   files/assets
+------------------------------------- */
+div.assets li.divider {
+  margin: 2em 0;
+}
+div.assets li.divider {
+  margin: 0 0 0.5em 0;
+  padding: 0.5em 0 0.5em;
+  font-weight: bold;
+  font-size: 90%;
+  border-bottom: 1px dotted #ccc;
+  text-transform: uppercase;
+  color: #666;
+}
+li.asset {
+  margin: 0 0 3em 1.5em;
+}
+#left_content li.asset h3 {
+  font-size: 140%;
+  margin: 1em 0 0.3em 0;
+  padding: 0;
+}
+li.asset h3 span.course a {
+  color: #999;
+  background: #eee;
+  padding: 0.3em 0.4em;
+}
+li.asset h3 a {
+  color: #000;
+  text-decoration: none;
+}
+li.asset h3 a:hover {
+  background: #fff;
+  color: #000;
+  text-decoration: underline;
+}
+li.asset h3 span.edit {
+  font-size: 70%;
+}
+li.asset h3 span.edit a {
+  color: #f00;
+  text-decoration: underline;
+}
+li.asset h3 span.edit a:hover {
+  color: #fff;
+  background: #f00;
+  text-decoration: none;
+}
+li.asset h5 {
+  color: #666;
+  font-size: 95%;
+  font-weight: normal;
+  padding-top: 0.2em;
+}
+
+
+/* -------------------------------------
+   calendar
+------------------------------------- */
+.calendar {
+  margin: auto;
+  width: 100%;
+}
+.calendar tbody {
+  border-left: 1px solid #eee;
+}
+.calendar th.month_name {
+  text-align: center;
+  padding-bottom: 0.7em;
+  font-size: 150%;
+}
+.calendar th.month_name a {
+  font-size: 70%;
+}
+.calendar .day_name th {
+  font-size: 100%;
+  padding-top: 0.6em;
+  padding-bottom: 0.3em;
+  background-color: #303030;
+  color: #fff;
+  text-align: center;
+}
+.other_month, .day, .special_day {
+  padding: 0.7em 1em;
+  border-right: 1px solid #ddd;
+}
+.other_month {
+  color: #eeeeee;
+  background-color: white;
+}
+.day, .special_day, .other_month {
+  border-bottom: 1px solid #eee;
+}
+.day {
+  background: #eee;
+}
+.special_day {
+  background: #B5E4F6;
+}
+#left_content .calendar p.event {
+  margin-bottom: 0.3em;
+}
+.calendar span.course {
+  display: block;
+  font-size: 90%;
+  color: #147B9E;
+}
+
+/*
+span.day_label {
+  text-align: left;
+}
+.day, .specialDay {
+  text-align: center;
+  border-bottom: 1px dotted #bbbbbb;
+  background-color: #bbccff;
+}
+.specialDay {
+  background-color: #003355;
+  color: white;
+}
+.specialDay a, .specialDay a:visited, .specialDay a:hover {
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+}
+.specialDay a:hover {
+  color: white;
+  background-color: black;
+}
+.weekendDay {
+  background-color: #ffffdd;
+}
+.today{
+	background-color: #4682b4;
+}
+*/
+
+
+/* -------------------------------------
+  markdown formatting
+------------------------------------- */
+div.note_content {
+
+}
+#left_content div.note_content h1 {
+  border-top: 4px solid #AAA;
+  font-size: 170%;
+  padding-top :0.5em;
+}
+#left_content div.note_content h2 {
+  border-top: 4px solid #E0E0E0;
+  font-size: 150%;
+  margin-top: 1.5em;
+  padding-top: 0.5em;
+}
+#left_content div.note_content h3 {
+  margin-top: 1em;
+  background-color: transparent;
+  border-bottom: none;
+}
+#left_content div.note_content p {
+  line-height: 1.5em;
+  margin: 1em 0;
+}
+#left_content div.note_content ul {
+  margin: 1em 0 1em 2em;
+  list-style: inherit;
+}
+#left_content div.note_content ol {
+  margin: 1em 0 1em 1.5em;
+  list-style: inherit;
+}
+#left_content div.note_content blockquote {
+  border-left:5px solid #DDD;
+  color:#555;
+  margin: 1em 0;
+  padding-left: 0.6em;
+}
+#left_content div.note_content table {
+  margin: 1em 0;
+}
+#left_content div.note_content table th {
+  border-bottom: 1px solid #BBB;
+  padding: 0.2em 1em;
+}
+#left_content div.note_content table td {
+  border-bottom: 1px solid #DDD;
+  padding: 0.2em 1em;
+}
+#left_content div.note_content pre {
+  background-color: #F8F8FF;
+  border: 1px solid #DEDEDE;
+  color: #444;
+  font-size:9 0%;
+  line-height: 1.5em;
+  margin: 1em 0;
+  padding: 0.5em;
+}
+#left_content div.note_content pre code {
+  background-color: #F8F8FF;
+  border: medium none;
+  font-size: 100%;
+  padding: 0;
+}
+#left_content div.note_content code {
+  background-color: #F8F8FF;
+  border: 1px solid #DEDEDE;
+  color: #444;
+  font-size: 90%;
+  padding: 0 0.2em;
+}
+#left_content div.note_content pre.console {
+  background-color: black;
+  color: white;
+  font-size: 90%;
+  line-height: 1.5em;
+  margin: 1em 0;
+  padding: 0.5em;
+}
+#left_content div.note_content pre.console code {
+  background-color: black;
+  border: medium none;
+  color: white;
+  font-size: 100%;
+  padding: 0;
+}
+#left_content div.note_content pre.console span {
+  color: #888;
+}
+#left_content div.note_content pre.console span.command {
+  color:yellow;
+}
+
+/*
+
+
+
+
+
+
+
+
+*/
+
+
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+
+
+.fieldWithErrors {
+  display: inline;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
