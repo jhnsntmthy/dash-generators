@@ -1,0 +1,21 @@
+<%% title "New <%= singular_name.titleize %>" %>
+
+<%= render_form %>
+
+<%- if action? :index -%>
+<p><%%= link_to "Back to List", <%= plural_name %>_path %></p>
+<%- end -%>
+
+
+<% content_for :right_sidebar do %>
+	<div class="hint">
+      <h3>Hint</h3>
+      <p>This is a hint.</p>
+    </div>
+	<div class="list">
+	  <h3>List Items</h3>
+	  <ul>
+	      <li><a href="#">link</a> <span class="date">date</span></li>
+	  </ul>
+	</div>
+<% end %>
