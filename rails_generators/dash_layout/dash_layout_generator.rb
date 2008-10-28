@@ -32,6 +32,7 @@ class DashLayoutGenerator < Rails::Generator::Base
         m.file     "tablesorter_filter.js", "public/javascripts/tablesorter_filter.js"
         m.file     "jquery.maskedinput.js", "public/javascripts/jquery.maskedinput.js"
         m.file     "application_pager.js", "public/javascripts/application_pager.js"
+        m.file     "_google_analytics.html.erb", "app/views/shared/_google_analytics.html.erb"
       end
       m.file "helper.rb", "app/helpers/layout_helper.rb"
     end
