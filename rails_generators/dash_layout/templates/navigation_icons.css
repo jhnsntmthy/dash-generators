@@ -1,20 +1,20 @@
 
 #tabs ul #tab-sitemap a {
-  background-image: url(silk/sitemap_color.png);
+  background-image: url(/images/silk/sitemap_color.png);
   background-position: 8px 8px;
 }
 #tabs ul #tab-pages a {
-  background-image: url(silk/page_green.png);
+  background-image: url(/images/silk/page_green.png);
 }
 #tabs ul #tab-photos a {
-  background-image: url(silk/photos.png);
+  background-image: url(/images/silk/photos.png);
 }
 #tabs ul #tab-notes a {
-  background-image: url(silk/note_edit.png);
+  background-image: url(/images/silk/note_edit.png);
 }
 #tabs ul #tab-calendar a {
-  background-image: url(silk/calendar_view_day.png);
+  background-image: url(/images/silk/calendar_view_day.png);
 }
 #tabs ul #tab-files a {
-  background-image: url(silk/folder_page.png);
+  background-image: url(/images/silk/folder_page.png);
 }
