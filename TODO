@@ -1,11 +1,11 @@
 
-Nifty Scaffold
+Dash Scaffold
   - add some validation for attributes/action names
   - refactor out long methods in scaffold generator
 
-Nifty Config
+Dash Config
   - make it easier to specify non environment specific configs
 
-Nifty Authentication
+Dash Authentication
   - add HAML support
   - generate tests for should, rspec, and testunit

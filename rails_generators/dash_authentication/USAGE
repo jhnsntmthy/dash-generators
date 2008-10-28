@@ -5,7 +5,7 @@ Description:
     simpler.
     
     IMPORTANT: This generator uses the "title" helper method which is generated
-    by the nifty_layout generator. You may want to run that generator first.
+    by the dash_layout generator. You may want to run that generator first.
 
 Usage:
     If you do not pass any arguments, the model name will default to "user", and
@@ -14,15 +14,15 @@ Usage:
     be CamelCased or under_scored.
 
 Examples:
-    script/generate nifty_authentication
+    script/generate dash_authentication
         
         Creates user model, users_controller, and sessions_controller.
     
-    script/generate nifty_authentication account
+    script/generate dash_authentication account
     
         Creates account model, accounts_controller, and sessions_controller.
     
-    script/generate nifty_authentication Account CurrentSession
+    script/generate dash_authentication Account CurrentSession
     
         Creates account model, accounts_controller, and current_sessions_controller.
 

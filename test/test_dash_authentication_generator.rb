@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), "test_helper.rb")
 
-class TestNiftyAuthenticationGenerator < Test::Unit::TestCase
-  include NiftyGenerators::TestHelper
+class TestDashAuthenticationGenerator < Test::Unit::TestCase
+  include DashGenerators::TestHelper
   
   # Some generator-related assertions:
   #   assert_generated_file(name, &block) # block passed the file contents
@@ -35,7 +35,7 @@ class TestNiftyAuthenticationGenerator < Test::Unit::TestCase
     end
 
     context "generator without arguments" do
-      rails_generator :nifty_authentication
+      rails_generator :dash_authentication
       should_generate_file 'app/models/user.rb'
       should_generate_file 'app/controllers/users_controller.rb'
       should_generate_file 'app/helpers/users_helper.rb'
@@ -71,7 +71,7 @@ class TestNiftyAuthenticationGenerator < Test::Unit::TestCase
     end
 
     context "generator with user and session names" do
-      rails_generator :nifty_authentication, "Account", "CurrentSessions"
+      rails_generator :dash_authentication, "Account", "CurrentSessions"
       should_generate_file 'app/models/account.rb'
       should_generate_file 'app/controllers/accounts_controller.rb'
       should_generate_file 'app/helpers/accounts_helper.rb'

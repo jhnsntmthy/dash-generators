@@ -1,4 +1,4 @@
-class NiftyLayoutGenerator < Rails::Generator::Base
+class DashLayoutGenerator < Rails::Generator::Base
   def initialize(runtime_args, runtime_options = {})
     super
     @name = @args.first || 'application'

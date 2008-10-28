@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), "test_helper.rb")
 
-class TestNiftyConfigGenerator < Test::Unit::TestCase
-  include NiftyGenerators::TestHelper
+class TestDashConfigGenerator < Test::Unit::TestCase
+  include DashGenerators::TestHelper
   
   # Some generator-related assertions:
   #   assert_generated_file(name, &block) # block passed the file contents
@@ -18,13 +18,13 @@ class TestNiftyConfigGenerator < Test::Unit::TestCase
   #   bare_teardown - place this in teardown method to destroy the TMP_ROOT or APP_ROOT folder after each test
   
   context "generator without name" do
-    rails_generator :nifty_config
+    rails_generator :dash_config
     should_generate_file 'config/app_config.yml'
     should_generate_file 'config/initializers/load_app_config.rb'
   end
   
   context "generator with name" do
-    rails_generator :nifty_config, "FooBar"
+    rails_generator :dash_config, "FooBar"
     should_generate_file 'config/foo_bar_config.yml'
     
     should "use the name as a constant in the initializer" do

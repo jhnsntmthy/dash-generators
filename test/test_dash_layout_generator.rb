@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), "test_helper.rb")
 
-class TestNiftyLayoutGenerator < Test::Unit::TestCase
-  include NiftyGenerators::TestHelper
+class TestDashLayoutGenerator < Test::Unit::TestCase
+  include DashGenerators::TestHelper
   
   # Some generator-related assertions:
   #   assert_generated_file(name, &block) # block passed the file contents
@@ -18,24 +18,24 @@ class TestNiftyLayoutGenerator < Test::Unit::TestCase
   #   bare_teardown - place this in teardown method to destroy the TMP_ROOT or APP_ROOT folder after each test
   
   context "generator without name" do
-    rails_generator :nifty_layout
+    rails_generator :dash_layout
     should_generate_file 'app/views/layouts/application.html.erb'
   end
   
   context "generator with name" do
-    rails_generator :nifty_layout, "foobar"
+    rails_generator :dash_layout, "foobar"
     should_generate_file 'app/views/layouts/foobar.html.erb'
     should_generate_file 'public/stylesheets/foobar.css'
     should_generate_file 'app/helpers/layout_helper.rb'
   end
   
   context "generator with CamelCase name" do
-    rails_generator :nifty_layout, "FooBar"
+    rails_generator :dash_layout, "FooBar"
     should_generate_file 'app/views/layouts/foo_bar.html.erb'
   end
   
   context "generator with haml option" do
-    rails_generator :nifty_layout, "foobar", :haml => true
+    rails_generator :dash_layout, "foobar", :haml => true
     should_generate_file 'app/views/layouts/foobar.html.haml'
     should_generate_file 'public/stylesheets/sass/foobar.sass'
   end

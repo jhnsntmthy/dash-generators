@@ -1,5 +1,5 @@
 require File.expand_path(File.dirname(__FILE__) + "/lib/insert_commands.rb")
-class NiftyAuthenticationGenerator < Rails::Generator::Base
+class DashAuthenticationGenerator < Rails::Generator::Base
   attr_accessor :user_name, :sessions_name
   
   def initialize(runtime_args, runtime_options = {})

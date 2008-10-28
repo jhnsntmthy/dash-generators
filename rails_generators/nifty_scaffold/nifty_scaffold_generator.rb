@@ -1,4 +1,4 @@
-class NiftyScaffoldGenerator < Rails::Generator::Base
+class DashScaffoldGenerator < Rails::Generator::Base
   attr_accessor :name, :attributes, :controller_actions
   
   def initialize(runtime_args, runtime_options = {})
