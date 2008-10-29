@@ -3,7 +3,9 @@
 <%= render_form %>
 
 <%- if action? :index -%>
-<p><%%= link_to "Back to List", <%= plural_name %>_path %></p>
+<%% content_for :subnav do %>
+<li><%%= link_to "Back to List", <%= plural_name %>_path %></li>
+<%% end %>
 <%- end -%>
 
 
