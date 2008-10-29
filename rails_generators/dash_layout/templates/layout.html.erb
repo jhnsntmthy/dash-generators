@@ -18,41 +18,12 @@
 
   </head>
   <body>
-	<div id="header">
-	  <div class="container clearfix">
-	    <div class="left clearfix">
-	      <b>
 
-		      <%%- if show_title? -%>
-		        <h1><%%=h yield(:title) %></h1>
-		      <%%- end -%>
-	      </b>
-	    </div>
-	    <div class="right clearfix">
-	        <a href="#">My Account</a>
-	      | <a href="#">Logout</a>
-	    </div>
-	  </div>
-	</div>
-     <%%- flash.each do |name, msg| -%>
-       <%%= content_tag :div, msg, :id => "flash_#{name}" %>
-     <%%- end -%>
-	<div id="tabs">
-	  <div class="container clearfix">
-	    <ul>
+	<%%= render :partial => "layouts/header" %>
 
+	<%%= render :partial => "layouts/tabs" %>
+	
 
-
-	  <li id="tab-sitemap" class="current"><a href="#">Site Map</a></li>
-	  <li id="tab-pages"><a href="#">Pages</a></li>
-	  <li id="tab-photos"><a href="#">Photos</a></li>
-	  <li id="tab-notes"><a href="#">Notes</a></li>
-	  <li id="tab-calendar"><a href="#">Calendar</a></li>
-	  <li id="tab-files"><a href="#">Files</a></li>
-
-	    </ul>
-	  </div>
-	</div>
 	
 	<div id="page">
 	  <div class="container clearfix">
@@ -88,7 +59,7 @@
 	</div>
 
 	<div id="footer">
-		<%%= render :partial => "footer" %>
+		<%%= render :partial => "layouts/footer" %>
 	</div>
 
 	<%%= render :partial => 'shared/google_analytics' %>

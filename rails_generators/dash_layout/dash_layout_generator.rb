@@ -17,6 +17,9 @@ class DashLayoutGenerator < Rails::Generator::Base
         m.file     "stylesheet.sass",  "public/stylesheets/sass/#{file_name}.sass"
       else
         m.template "layout.html.erb", "app/views/layouts/#{file_name}.html.erb"
+        m.template "_header.html.erb", "app/views/layouts/_header.html.erb"
+        m.file     "_footer.html.erb", "app/views/layouts/_footer.html.erb"
+        m.file     "_tabs.html.erb", "app/views/layouts/_tabs.html.erb"
         m.file     "reset.css",  "public/stylesheets/reset.css"
         m.file     "ie.css",  "public/stylesheets/ie.css"
         m.file     "dashboard.css",  "public/stylesheets/dashboard.css"
