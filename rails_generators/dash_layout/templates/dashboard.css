@@ -901,7 +901,9 @@ div.note_content {
 
 #flash_notice, #flash_error {
   padding: 5px 8px;
-  margin: 10px 0;
+  margin: 10px auto;
+	font-size: 140%;
+	width: 80%;
 }
 
 #flash_notice {
