@@ -35,7 +35,7 @@ Search: <input name="filter" id="filter-box" value="" maxlength="30" size="30" t
 
 <%- if action? :new -%>
 <%% content_for :subnav do %>
-<li><%%= link_to "+ Add a new <%= singular_name.titleize %>", new_<%= singular_name %>_path, :class => 'button' %></li>
+<li class="action positive"><%%= link_to "+ Add a new <%= singular_name.titleize %>", new_<%= singular_name %>_path %></li>
 <%% end %>
 <%- end -%>
 

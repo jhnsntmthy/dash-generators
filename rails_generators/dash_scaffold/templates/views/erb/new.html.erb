@@ -4,7 +4,7 @@
 
 <%- if action? :index -%>
 <%% content_for :subnav do %>
-<li><%%= link_to "Back to List", <%= plural_name %>_path %></li>
+<li class="action"><%%= link_to "Back to List", <%= plural_name %>_path %></li>
 <%% end %>
 <%- end -%>
 

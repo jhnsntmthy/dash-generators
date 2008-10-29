@@ -5,10 +5,10 @@
 <%- if actions? :show, :index -%>
 <%% content_for :subnav do %>
 <%- if action? :show -%>
-  <li><%%= link_to "Cancel Editing", @<%= singular_name %> %></li>
+  <li class="action"><%%= link_to "Cancel Editing", @<%= singular_name %> %></li>
 <%- end -%>
 <%- if action? :index -%>
-  <li><%%= link_to "View All", <%= plural_name %>_path %></li>
+  <li class="action"><%%= link_to "View All", <%= plural_name %>_path %></li>
 <%- end -%>
 
 <%% end %>

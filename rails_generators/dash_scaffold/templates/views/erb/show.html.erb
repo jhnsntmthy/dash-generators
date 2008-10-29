@@ -11,13 +11,13 @@
 <%% content_for :subnav do %>
 	
 <%- if action? :edit -%>
-  <li><%%= link_to "Edit", edit_<%= singular_name %>_path(@<%= singular_name %>) %></li>
+  <li class="action"><%%= link_to "Edit", edit_<%= singular_name %>_path(@<%= singular_name %>) %></li>
 <%- end -%>
 <%- if action? :destroy -%>
-  <li><%%= link_to "Destroy", @<%= singular_name %>, :confirm => 'Are you sure?', :method => :delete %></li>
+  <li class="action negative"><%%= link_to "Destroy", @<%= singular_name %>, :confirm => 'Are you sure?', :method => :delete %></li>
 <%- end -%>
 <%- if action? :index -%>
-  <li><%%= link_to "View All", <%= plural_name %>_path %></li>
+  <li class="action"><%%= link_to "View All", <%= plural_name %>_path %></li>
 <%- end -%>
 <%% end %>
 

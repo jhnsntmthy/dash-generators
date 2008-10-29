@@ -77,3 +77,11 @@ div#tabs a:link, div#tabs a:visited {
 #sub-nav li.action a {
   float: right;
 }
+#sub-nav li.action.positive a:hover {
+  background: #ffe9e9;
+  color: #900;
+}
+#sub-nav li.action.negative a:hover {
+  background: #e9ffe9;
+  color: #393;
+}
