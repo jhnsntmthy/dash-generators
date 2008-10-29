@@ -1,0 +1,249 @@
+/* tables */
+table.tablesorter {
+	font-family:arial;
+	background-color: #ccc;
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	width: 100%;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #cfc;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+}
+table.tablesorter thead tr .header {
+/*	background-image: url(bg.gif);*/
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #333;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#dfd;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(/images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(/images/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #9e9;
+}
+input.pagedisplay {
+	width: 5em;
+	text-align: center;
+}
+.pager {
+	float:left;
+}
+.clear { /* generic container (i.e. div) for floating buttons */
+    overflow: hidden;
+    width: 100%;
+}
+
+a.button {
+    background: transparent url('/images/bg_button_a.gif') no-repeat scroll top right;
+    color: #444;
+    display: block;
+    float: right;
+    font: normal 12px arial, sans-serif;
+    height: 24px;
+    margin-right: 6px;
+    padding-right: 18px; /* sliding doors padding */
+    text-decoration: none;
+}
+
+a.button span {
+    background: transparent url('/images/bg_button_span.gif') no-repeat;
+    display: block;
+    line-height: 14px;
+    padding: 5px 0 5px 18px;
+}
+a.button:active {
+    background-position: bottom right;
+    color: #000;
+    outline: none; /* hide dotted outline in Firefox */
+}
+
+a.button:active span {
+    background-position: bottom left;
+    padding: 6px 0 4px 18px; /* push text down 1px */
+}
+
+
+
+
+/* Start Forms */
+form fieldset {
+  width: 34em;
+  font-size: 16pt; }
+form fieldset legend,
+form label,
+form input,
+form select,
+form select option,
+form textarea {
+  font-family: 'Helvetica Neue', Helvetica, Arial;
+  font-size: 12px;
+  font-color: #000; }
+form input,
+form select,
+form textarea {
+  border: none;
+	border: 1px solid #777;
+	background-color: #f3f3ff;
+	padding: 3px 6px; }
+form textarea {
+  border: 1px solid #777;
+ 	height: 5em;}
+form input[type=text],
+form input[type=password],
+form textarea {
+  width: 350px; }
+form select {
+  height: 1.5em; }
+form input[type=submit],
+form input[type=button] {
+  background: #229316;
+  color: #fff;
+  border-top: 2px solid #55c649;
+  border-left: 2px solid #55c649;
+  border-right: 2px solid #006000;
+  border-bottom: 2px solid #006000;
+  margin: 0 5px; }
+form input[type=submit][value=CANCEL] {
+  border-top: 2px solid #888;
+  border-left: 2px solid #888;
+  border-bottom: 2px solid #555;
+  border-right: 2px solid #555;
+  color: #fff;
+  background: #777; }
+form div.fieldWithErrors {
+  display: inline; }
+  form div.fieldWithErrors input, form div.fieldWithErrors select, form div.fieldWithErrors textarea {
+    border-top: 2px solid #8F0600;
+    border-left: 2px solid #8F0600;
+    border-bottom: 2px solid #BB4036;
+    border-right: 2px solid #BB4036;
+    line-height: 1.5em; }
+form div.check-box-field,
+form div.check-box-fields,
+form div.date-field,
+form div.datetime-field,
+form div.file-field,
+form div.password-field,
+form div.radio-field,
+form div.radio-fields,
+form div.select-field,
+form div.text-field,
+form div.textarea-field,
+form div.time-zone-select-field,
+form div.submit-field {
+  float: left;
+  clear: both;
+  margin: 0;
+  padding: 10px;
+  border-bottom: 1px solid #cccccc;
+  font-size: 16px; }
+  form div.check-box-field div.input,
+  form div.check-box-fields div.input,
+  form div.date-field div.input,
+  form div.datetime-field div.input,
+  form div.file-field div.input,
+  form div.password-field div.input,
+  form div.radio-field div.input,
+  form div.radio-fields div.input,
+  form div.select-field div.input,
+  form div.text-field div.input,
+  form div.textarea-field div.input,
+  form div.time-zone-select-field div.input,
+  form div.submit-field div.input {
+    float: left;
+    clear: right;
+    text-align: left;
+    width: 400px;
+    padding-left: 5px; }
+  form div.check-box-field label,
+  form div.check-box-fields label,
+  form div.date-field label,
+  form div.datetime-field label,
+  form div.file-field label,
+  form div.password-field label,
+  form div.radio-field label,
+  form div.radio-fields label,
+  form div.select-field label,
+  form div.text-field label,
+  form div.textarea-field label,
+  form div.time-zone-select-field label,
+  form div.submit-field label {
+		text-transform: uppercase;
+    float: left;
+    display: block;
+    width: 180px;
+		color: #000;
+		font-size: 10px;
+		letter-spacing: 1px;
+    padding-right: 10px;
+    text-align: right; }
+    form div.check-box-field label span.help,
+    form div.check-box-fields label span.help,
+    form div.date-field label span.help,
+    form div.datetime-field label span.help,
+    form div.file-field label span.help,
+    form div.password-field label span.help,
+    form div.radio-field label span.help,
+    form div.radio-fields label span.help,
+    form div.select-field label span.help,
+    form div.text-field label span.help,
+    form div.textarea-field label span.help,
+    form div.time-zone-select-field label span.help,
+    form div.submit-field label span.help {
+      display: block;
+			text-transform: none;
+      font-size: 10px;
+			font-family: Union, Georgia;
+      font-weight: normal;
+			letter-spacing: 0px;
+      margin-top: 5px;
+			color: #777;
+      line-height: 100%; }
+form div.submit-field {
+  border: none; }
+form div.submit-field div.input {
+  font-size: 16pt;
+  margin-left: 12em; }
+form div.check-box-fields div.input label,
+form div.radio-fields div.input label {
+  clear: left;
+  width: auto;
+  font-size: 80%; }
+form div.required {
+  float: left; }
+  form div.required label, form div.required p, form div.required span {
+    color: #944;
+    font-weight: bold; }
+  form div.required label span.help {
+    margin-top: 0; }
+  form div.required input {
+    border: 2px solid #f00;
+ 		color: #900;}
+
+/* End Forms */
+
+
+form div.large input,
+form div.large select,
+form div.large select option,
+form div.large textarea {
+  font-family: Helvetica, 'Helvetica Neue';
+  font-size: 24px;
+  font-color: #000;
+}
