@@ -7,7 +7,6 @@ $(document).ready(function() {
   .tablesorter({debug: false, widgets: ['zebra'], sortList: [[0,0], [1,0]]})  
   .tablesorterFilter({filterContainer: $("#filter-box"),  
                       filterClearContainer: $("#filter-clear-button"),  
-                      filterColumns: [1,2],  
                       filterCaseSensitive: false})
 	.tablesorterPager({container: $(".pager"), positionFixed: false});
 
