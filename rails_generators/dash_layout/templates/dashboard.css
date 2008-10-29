@@ -2,7 +2,7 @@ body {
   text-align: center;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 10px;
-  background: #74bdcc;
+  background: #999;
   line-height: 150%;
 }
 
@@ -193,7 +193,7 @@ fieldset div.fieldWithErrors {
 #header {
   background: #222;
   font-size: 110%;
-  border-bottom: 2px solid #9edcf3;
+  border-bottom: 2px solid #bbb;
 }
 #header b {
   background: transparent url(../images/mini_logo.png) 0 0 no-repeat;

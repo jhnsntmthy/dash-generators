@@ -9,7 +9,7 @@ table.tablesorter {
 	text-align: left;
 }
 table.tablesorter thead tr th, table.tablesorter tfoot tr th {
-	background-color: #cfc;
+	background-color: #ace2ed;
 	border: 1px solid #FFF;
 	font-size: 8pt;
 	padding: 4px;
@@ -27,7 +27,7 @@ table.tablesorter tbody td {
 	vertical-align: top;
 }
 table.tablesorter tbody tr.odd td {
-	background-color:#dfd;
+	background-color:#eee;
 }
 table.tablesorter thead tr .headerSortUp {
 	background-image: url(/images/asc.gif);
@@ -36,7 +36,7 @@ table.tablesorter thead tr .headerSortDown {
 	background-image: url(/images/desc.gif);
 }
 table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
-background-color: #9e9;
+background-color: #74bdcc;
 }
 input.pagedisplay {
 	width: 5em;

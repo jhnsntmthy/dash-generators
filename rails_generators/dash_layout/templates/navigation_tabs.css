@@ -21,12 +21,12 @@ div#tabs a:link, div#tabs a:visited {
 	float: left;
 	color: #000;
 	font-size: 90%;
-	background-color: #ace2ed;
+	background-color: #ccc;
   background-position: 8px 7px;
   background-repeat: no-repeat;
 	padding: 0.7em 0.9em 0.7em 28px;
 	margin: 0 0.2em 0 0;
-	border-bottom: 2px solid #74bdcc;
+	border-bottom: 2px solid #999;
 	font-weight: bold;
   -moz-border-radius: 4px 4px 0 0;
   -webkit-border-top-left-radius: 4px;
