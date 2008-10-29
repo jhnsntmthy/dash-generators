@@ -14,5 +14,8 @@ $(document).ready(function() {
 	   this.blur();
 	});
 	$("a.button").wrapInner("<span></span>")
-
+	$("input[name*='phone']").mask("(999) 999-9999");
+	$("input[name*='_at']").mask("99/99/9999 99:99");
+  $("input[name*='_on']").mask("99/99/9999");
+  $("input[name*='zip']").mask("99999");
 });
