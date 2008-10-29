@@ -1,5 +1,6 @@
 /* tables */
 table.tablesorter {
+	clear: both;
 	font-family:arial;
 	background-color: #ccc;
 	margin:10px 0pt 15px;
