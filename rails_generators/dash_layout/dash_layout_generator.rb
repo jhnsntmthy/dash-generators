@@ -10,6 +10,8 @@ class DashLayoutGenerator < Rails::Generator::Base
       m.directory 'public/stylesheets'
       m.directory 'app/helpers'
       m.directory 'app/views/shared'
+
+      m.file "helper.rb", "app/helpers/layout_helper.rb"
       
       if options[:haml]
         m.directory 'public/stylesheets/sass'
@@ -20,6 +22,7 @@ class DashLayoutGenerator < Rails::Generator::Base
         m.template "_header.html.erb", "app/views/layouts/_header.html.erb"
         m.file     "_footer.html.erb", "app/views/layouts/_footer.html.erb"
         m.file     "_tabs.html.erb", "app/views/layouts/_tabs.html.erb"
+        m.file     "_google_analytics.html.erb", "app/views/shared/_google_analytics.html.erb"
         m.file     "stylesheets/reset.css",  "public/stylesheets/reset.css"
         m.file     "stylesheets/ie.css",  "public/stylesheets/ie.css"
         m.file     "stylesheets/dashboard.css",  "public/stylesheets/dashboard.css"
@@ -37,9 +40,7 @@ class DashLayoutGenerator < Rails::Generator::Base
         m.file     "javascripts/jquery.maskedinput.js", "public/javascripts/jquery.maskedinput.js"
         m.file     "javascripts/jquery.example.js", "public/javascripts/jquery.example.js"
         m.file     "javascripts/application_form_basics.js", "public/javascripts/application_form_basics.js"
-        m.file     "_google_analytics.html.erb", "app/views/shared/_google_analytics.html.erb"
       end
-      m.file "helper.rb", "app/helpers/layout_helper.rb"
     end
   end
   

@@ -1,7 +1,7 @@
 <%% title "<%= plural_name.titleize %>" %>
 
 Search: <input name="filter" id="filter-box" value="" maxlength="30" size="30" type="text">  
-<img id="filter-clear-button" src="/images/silk/delete.png" />
+<img id="filter-clear-button" src="/images/silk/cross.png" />
 
 <%%= render :partial => 'shared/pager' unless @<%= plural_name %>.empty? %>
 <br class="clear" />
