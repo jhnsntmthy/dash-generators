@@ -1,16 +1,16 @@
 = Dash Generators
 
-A collection of useful Rails generator scripts.
+A collection of useful Rails generator scripts. Forked from
+Ryan Bates' nifty-generators gem.
 
 
 == Install
 
-  gem install dash-generators
+  install as a plugin to your Rails app
 
-You may need to uninstall the older version if it's installed.
+  script/plugin install git://github.com/jhnsntmthy/dash-generators.git
 
-  gem uninstall ryanb-dash-generators
-
+  or compile as a gem so you can use it system-wide
 
 == Usage
 
@@ -86,9 +86,16 @@ Also, make sure you're using Rails 2.1 or greater.
 
 == Development
 
-This project can be found on github at the following URL.
+Ryan Bates' original project can be found on github at the following URL.
 
-http://github.com/ryanb/dash-generators/
+http://github.com/ryanb/nifty-generators/
+
+
+Timothy Johnson's fork can be found on github at the following URL.
+
+http://github.com/jhnsntmthy/dash-generators/
 
 If you wish the generators behaved differently, please consider
-forking the project and modifying to your heart's content.
+forking the project and modifying to your heart's content. That is what
+this version represents, is a bit more robust starting point for an
+administrative interface.
