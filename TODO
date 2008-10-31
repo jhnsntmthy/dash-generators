@@ -9,3 +9,23 @@ Dash Config
 Dash Authentication
   - add HAML support
   - generate tests for should, rspec, and testunit
+
+Dash Plugins
+install git://github.com/giraffesoft/attribute_fu.git
+install git://github.com/thoughtbot/shoulda.git
+install git://github.com/thoughtbot/paperclip.git
+install git://github.com/binarylogic/authgasm.git
+install git://github.com/thoughtbot/hoptoad_notifier.git
+install git://github.com/thoughtbot/pacecar.git
+install git://github.com/thoughtbot/squirrel.git
+install git://github.com/binarylogic/searchgasm.git
+
+config.gem 'thoughtbot-shoulda', :lib => 'shoulda', :source => "http://gems.github.com" 
+config.gem 'thoughtbot-factory_girl', :lib => 'factory_girl', :source => "http://gems.github.com"
+config.gem "thoughtbot-clearance", :lib => 'clearance', :source => 'http://gems.github.com/'
+
+gem install thoughtbot-factory_girl --source http://gems.github.com
+rake gems:install
+rake gems:unpack
+
+script/generate clearance
