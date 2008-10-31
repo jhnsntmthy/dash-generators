@@ -40,6 +40,7 @@ class DashLayoutGenerator < Rails::Generator::Base
         m.file     "javascripts/jquery.maskedinput.js", "public/javascripts/jquery.maskedinput.js"
         m.file     "javascripts/jquery.example.js", "public/javascripts/jquery.example.js"
         m.file     "javascripts/application_form_basics.js", "public/javascripts/application_form_basics.js"
+        
       end
     end
   end

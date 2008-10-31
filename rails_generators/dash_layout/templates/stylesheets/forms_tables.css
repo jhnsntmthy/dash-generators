@@ -248,3 +248,8 @@ form div.large textarea {
   font-size: 24px;
   font-color: #000;
 }
+form DL {
+	margin-bottom: 15px;
+}
+
+INPUT.example {color: #aaa;}

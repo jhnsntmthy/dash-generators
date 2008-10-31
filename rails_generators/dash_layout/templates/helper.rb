@@ -20,4 +20,12 @@ module LayoutHelper
     args = args.map { |arg| arg == :defaults ? arg : arg.to_s }
     content_for(:head) { javascript_include_tag(*args) }
   end
+  def money_from_cents(cents)
+    return "$0" if cents == 0 || cents.nil?
+    number_to_currency (cents.to_f / 100)
+  end
+  
+  def style_current_if(str)
+    return 'style="current"' if controller.controller_name == str
+  end
 end
