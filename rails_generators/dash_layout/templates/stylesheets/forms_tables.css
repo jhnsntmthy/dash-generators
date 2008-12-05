@@ -253,3 +253,6 @@ form DL {
 }
 
 INPUT.example {color: #aaa;}
+#filter-box {
+	margin-bottom: 1em;
+}
