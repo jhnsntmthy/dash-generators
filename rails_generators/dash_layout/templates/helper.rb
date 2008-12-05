@@ -25,7 +25,7 @@ module LayoutHelper
     number_to_currency (cents.to_f / 100)
   end
   
-  def style_current_if(str)
-    return 'style="current"' if controller.controller_name == str
+  def class_current_if(str)
+    return 'class="current"' if controller.controller_name == str
   end
 end
