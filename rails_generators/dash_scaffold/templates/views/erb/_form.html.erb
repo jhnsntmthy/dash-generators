@@ -4,7 +4,7 @@
 <dl>
 <%- for attribute in attributes -%>
   <dt><%%= f.label :<%= attribute.name %> %></dt>
-	<dd><%%= f.<%= attribute.field_type %> :<%= attribute.name %> %></dd>
+	<dd><%%= f.<%= attribute.field_type %> :<%= attribute.name %>, :class => "<%= attribute.type %>" %></dd>
 <%- end -%>
 </dl>
 <p><%%= f.submit "Save" %> or <%%= f.submit "Save &amp; add another" %></p>

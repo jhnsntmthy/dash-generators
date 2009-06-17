@@ -29,8 +29,6 @@ class DashLayoutGenerator < Rails::Generator::Base
         m.file     "stylesheets/navigation_tabs.css",  "public/stylesheets/navigation_tabs.css"
         m.file     "stylesheets/navigation_icons.css",  "public/stylesheets/navigation_icons.css"
         m.file     "stylesheets/forms_tables.css",  "public/stylesheets/forms_tables.css"
-        m.file     "javascripts/jquery-1.2.6.min.js", "public/javascripts/jquery-1.2.6.min.js"
-        m.file     "javascripts/jquery-ui.js", "public/javascripts/jquery-ui.js"
         m.file     "javascripts/jquery-fx.js", "public/javascripts/jquery-fx.js"
         m.file     "javascripts/jquery-pages.js", "public/javascripts/jquery-pages.js"
         m.file     "javascripts/thickbox.js", "public/javascripts/thickbox.js"
